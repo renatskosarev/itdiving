@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/background">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_camera"
+        style="@style/MaterialButtonStyle"
+        app:icon="@drawable/videocam_28"
+        app:cornerRadius="90dp"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_microphone"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_microphone"
+        style="@style/MaterialButtonStyle"
+        app:cornerRadius="90dp"
+        app:icon="@drawable/microphone_alt_28"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_camera"
+        app:layout_constraintEnd_toStartOf="@id/btn_reactions"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_reactions"
+        style="@style/MaterialButtonStyle"
+        app:cornerRadius="90dp"
+        app:icon="@drawable/hand_heart_filled_28"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toEndOf="@id/btn_microphone"
+        app:layout_constraintEnd_toStartOf="@id/btn_exit"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_exit"
+        style="@style/MaterialButtonStyle"
+        android:backgroundTint="@color/button_red"
+        app:cornerRadius="90dp"
+        app:icon="@drawable/phone_down_filled_28"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_reactions"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/buttons_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:constraint_referenced_ids="btn_camera,btn_microphone,btn_reactions,btn_exit"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
