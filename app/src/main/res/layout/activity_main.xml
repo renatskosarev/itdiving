@@ -4,21 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/background">
+    android:background="@color/background"
+    tools:context=".MainActivity">
 
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_messages"
+        style="@style/MaterialMiniButtonStyle"
+        app:cornerRadius="90dp"
+        app:icon="@drawable/message_outline_28"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_users"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_users"
+        style="@style/MaterialMiniButtonStyle"
+        app:cornerRadius="90dp"
+        app:icon="@drawable/users_outline_28"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toEndOf="@id/btn_messages"
+        app:layout_constraintEnd_toStartOf="@id/btn_sort"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sort"
+        style="@style/MaterialMiniButtonStyle"
+        app:cornerRadius="90dp"
+        app:icon="@drawable/square_4_outline_28"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toEndOf="@id/btn_users"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_camera"
         style="@style/MaterialButtonStyle"
-        app:icon="@drawable/videocam_28"
         app:cornerRadius="90dp"
+        app:icon="@drawable/videocam_28"
         app:iconGravity="textStart"
         app:iconPadding="0dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn_microphone"
-        app:layout_constraintHorizontal_chainStyle="packed"/>
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_microphone"
@@ -28,8 +62,8 @@
         app:iconGravity="textStart"
         app:iconPadding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btn_camera"
-        app:layout_constraintEnd_toStartOf="@id/btn_reactions"/>
+        app:layout_constraintEnd_toStartOf="@id/btn_reactions"
+        app:layout_constraintStart_toEndOf="@id/btn_camera" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_reactions"
@@ -38,9 +72,9 @@
         app:icon="@drawable/hand_heart_filled_28"
         app:iconGravity="textStart"
         app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@id/btn_microphone"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn_exit"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toEndOf="@id/btn_microphone" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_exit"
@@ -52,16 +86,15 @@
         app:iconPadding="0dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btn_reactions"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_reactions" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/buttons_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:constraint_referenced_ids="btn_camera,btn_microphone,btn_reactions,btn_exit"/>
-
+        app:constraint_referenced_ids="btn_camera,btn_microphone,btn_reactions,btn_exit"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
