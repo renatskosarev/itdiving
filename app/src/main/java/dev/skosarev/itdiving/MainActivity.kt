@@ -113,9 +113,9 @@ class MainActivity : AppCompatActivity() {
             cardFlow?.referencedIds = referenceIds
 
             if (squaresIconState) {
-                randomSortButton?.setIconResource(R.drawable.grid_rectangle_up_square_2_down_outline_28)
-            } else {
                 randomSortButton?.setIconResource(R.drawable.square_4_outline_28)
+            } else {
+                randomSortButton?.setIconResource(R.drawable.grid_rectangle_up_square_2_down_outline_28)
             }
             squaresIconState = !squaresIconState
         }

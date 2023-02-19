@@ -179,10 +179,14 @@
         app:srcCompat="@drawable/user_4" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/user_name_1"
+        android:layout_width="@dimen/user_name_width"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
         android:text="@string/some_name"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="@dimen/nameTextSize"
         app:layout_constraintBottom_toBottomOf="@id/user_card_1"
@@ -190,10 +194,14 @@
         app:layout_constraintStart_toStartOf="@id/user_card_1" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/user_name_2"
+        android:layout_width="@dimen/user_name_width"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="@string/some_name"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/some_long_name"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="@dimen/nameTextSize"
         app:layout_constraintBottom_toBottomOf="@id/user_card_2"
@@ -201,10 +209,14 @@
         app:layout_constraintStart_toStartOf="@id/user_card_2" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/user_name_3"
+        android:layout_width="@dimen/user_name_width"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
         android:text="@string/some_name"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="@dimen/nameTextSize"
         app:layout_constraintBottom_toBottomOf="@id/user_card_3"
@@ -212,14 +224,17 @@
         app:layout_constraintStart_toStartOf="@id/user_card_3" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/user_name_4"
+        android:layout_width="@dimen/user_name_width"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
         android:text="@string/some_name"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="@dimen/nameTextSize"
         app:layout_constraintBottom_toBottomOf="@id/user_card_4"
         app:layout_constraintEnd_toEndOf="@id/user_card_4"
         app:layout_constraintStart_toStartOf="@id/user_card_4" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

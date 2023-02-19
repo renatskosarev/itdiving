@@ -2,6 +2,7 @@
 <resources>
     <dimen name="user_card_height">200dp</dimen>
     <dimen name="user_card_width">180dp</dimen>
+    <dimen name="user_name_width">150dp</dimen>
     <dimen name="user_pic_height">90dp</dimen>
     <dimen name="user_pic_width">90dp</dimen>
     <dimen name="nameTextSize">16sp</dimen>
