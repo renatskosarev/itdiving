@@ -1,7 +1,9 @@
 package dev.skosarev.itdiving
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -27,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         cameraButton = findViewById(R.id.btn_camera)
         microphoneButton = findViewById(R.id.btn_microphone)
@@ -72,6 +74,15 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, "До свидания!", Toast.LENGTH_SHORT).show()
             finish()
             exitProcess(0)
+        }
+
+        messagesButton?.setOnClickListener {
+            startActivity(Intent(Intent.ACTION_VIEW).setData(Uri.parse("sms:")))
+        }
+
+        usersButton?.setOnClickListener {
+            val intent = Intent(this, UsersActivity::class.java)
+            startActivity(intent)
         }
     }
 }
