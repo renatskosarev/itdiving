@@ -105,6 +105,23 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        randomSortButton?.setOnClickListener {
+            val referenceIds: IntArray =
+                intArrayOf(R.id.user_card_1, R.id.user_card_2, R.id.user_card_3, R.id.user_card_4)
+            referenceIds.shuffle()
+            cardFlow?.referencedIds = referenceIds
+
+            /*
+                когда-нибудь я разберусь, как обновлять Flow из кода, и уберу этот кринж
+                но сейчас мне нужно бежать по неотложным делам, поэтому это пока будет здесь
+            */
+            if (microphoneIconState) {
+                microphoneButton?.setIconResource(R.drawable.microphone_alt_28)
+            } else {
+                microphoneButton?.setIconResource(R.drawable.microphone_slash_28)
+            }
+        }
+
         Glide.with(this)
             .load(R.drawable.user_1)
             .apply(bitmapTransform(MultiTransformation(BlurTransformation(25, 2), ColorFilterTransformation(Color.argb(90, 0, 0, 0)))))
