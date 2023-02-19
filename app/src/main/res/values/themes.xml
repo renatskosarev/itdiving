@@ -29,4 +29,12 @@
         <item name="android:layout_marginEnd">10dp</item>
         <item name="android:layout_marginBottom">10dp</item>
     </style>
+
+    <style name="UserCard" parent="">
+        <item name="cornerSize">5%</item>
+    </style>
+
+    <style name="UserPicture" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>

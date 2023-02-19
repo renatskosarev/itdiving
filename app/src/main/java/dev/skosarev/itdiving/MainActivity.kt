@@ -9,7 +9,14 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.constraintlayout.helper.widget.Flow
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.MultiTransformation
+import com.bumptech.glide.request.RequestOptions.bitmapTransform
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.imageview.ShapeableImageView
+import jp.wasabeef.glide.transformations.BlurTransformation
+import jp.wasabeef.glide.transformations.ColorFilterTransformation
 import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +27,12 @@ class MainActivity : AppCompatActivity() {
     private var messagesButton: MaterialButton? = null
     private var usersButton: MaterialButton? = null
     private var randomSortButton: MaterialButton? = null
+
+    private var userCard1: ShapeableImageView? = null
+    private var userCard2: ShapeableImageView? = null
+    private var userCard3: ShapeableImageView? = null
+    private var userCard4: ShapeableImageView? = null
+    private var cardFlow: Flow? = null
 
     private var cameraIconState: Boolean = true
     private var microphoneIconState: Boolean = true
@@ -39,6 +52,12 @@ class MainActivity : AppCompatActivity() {
         messagesButton = findViewById(R.id.btn_messages)
         usersButton = findViewById(R.id.btn_users)
         randomSortButton = findViewById(R.id.btn_sort)
+
+        userCard1 = findViewById(R.id.user_card_1)
+        userCard2 = findViewById(R.id.user_card_2)
+        userCard3 = findViewById(R.id.user_card_3)
+        userCard4 = findViewById(R.id.user_card_4)
+        cardFlow = findViewById(R.id.card_flow)
 
 
         cameraButton?.setOnClickListener {
@@ -85,5 +104,25 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, UsersActivity::class.java)
             startActivity(intent)
         }
+
+        Glide.with(this)
+            .load(R.drawable.user_1)
+            .apply(bitmapTransform(MultiTransformation(BlurTransformation(25, 2), ColorFilterTransformation(Color.argb(90, 0, 0, 0)))))
+            .into(userCard1!!)
+
+        Glide.with(this)
+            .load(R.drawable.user_2)
+            .apply(bitmapTransform(MultiTransformation(BlurTransformation(25, 2), ColorFilterTransformation(Color.argb(90, 0, 0, 0)))))
+            .into(userCard2!!)
+
+        Glide.with(this)
+            .load(R.drawable.user_3)
+            .apply(bitmapTransform(MultiTransformation(BlurTransformation(25, 2), ColorFilterTransformation(Color.argb(90, 0, 0, 0)))))
+            .into(userCard3!!)
+
+        Glide.with(this)
+            .load(R.drawable.user_4)
+            .apply(bitmapTransform(MultiTransformation(BlurTransformation(25, 2), ColorFilterTransformation(Color.argb(90, 0, 0, 0)))))
+            .into(userCard4!!)
     }
 }

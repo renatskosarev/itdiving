@@ -6,4 +6,6 @@
 <br>
 <br>
 <hr>
-Использованы иконки: https://github.com/VKCOM/icons
+Использованы ресурсы:
+иконки — https://github.com/VKCOM/icons
+картинки — https://vk.com/album-22822305_126315661

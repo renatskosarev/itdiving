@@ -15,10 +15,10 @@
         app:icon="@drawable/message_outline_28"
         app:iconGravity="textStart"
         app:iconPadding="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn_users"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_users"
@@ -27,8 +27,8 @@
         app:icon="@drawable/users_outline_28"
         app:iconGravity="textStart"
         app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@id/btn_messages"
         app:layout_constraintEnd_toStartOf="@id/btn_sort"
+        app:layout_constraintStart_toEndOf="@id/btn_messages"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
@@ -38,8 +38,8 @@
         app:icon="@drawable/square_4_outline_28"
         app:iconGravity="textStart"
         app:iconPadding="0dp"
-        app:layout_constraintStart_toEndOf="@id/btn_users"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_users"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
@@ -89,12 +89,137 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_reactions" />
 
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/buttons_group"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/user_card_1"
+        android:layout_width="@dimen/user_card_width"
+        android:layout_height="@dimen/user_card_height"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/UserCard"
+        app:srcCompat="@drawable/user_1" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/user_card_2"
+        android:layout_width="@dimen/user_card_width"
+        android:layout_height="@dimen/user_card_height"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/UserCard"
+        app:srcCompat="@drawable/user_2" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/user_card_3"
+        android:layout_width="@dimen/user_card_width"
+        android:layout_height="@dimen/user_card_height"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/UserCard"
+        app:srcCompat="@drawable/user_3" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/user_card_4"
+        android:layout_width="@dimen/user_card_width"
+        android:layout_height="@dimen/user_card_height"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/UserCard"
+        app:srcCompat="@drawable/user_4" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/card_flow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="user_card_1,user_card_2,user_card_3,user_card_4"
+        app:flow_horizontalStyle="spread"
+        app:flow_verticalBias="0.4"
+        app:flow_verticalGap="16dp"
+        app:flow_verticalStyle="packed"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="@dimen/user_pic_width"
+        android:layout_height="@dimen/user_pic_height"
+        app:layout_constraintBottom_toBottomOf="@id/user_card_1"
+        app:layout_constraintEnd_toEndOf="@id/user_card_1"
+        app:layout_constraintStart_toStartOf="@id/user_card_1"
+        app:layout_constraintTop_toTopOf="@id/user_card_1"
+        app:shapeAppearanceOverlay="@style/UserPicture"
+        app:srcCompat="@drawable/user_1" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="@dimen/user_pic_width"
+        android:layout_height="@dimen/user_pic_height"
+        app:layout_constraintBottom_toBottomOf="@id/user_card_2"
+        app:layout_constraintEnd_toEndOf="@id/user_card_2"
+        app:layout_constraintStart_toStartOf="@id/user_card_2"
+        app:layout_constraintTop_toTopOf="@id/user_card_2"
+        app:shapeAppearanceOverlay="@style/UserPicture"
+        app:srcCompat="@drawable/user_2" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="@dimen/user_pic_width"
+        android:layout_height="@dimen/user_pic_height"
+        app:layout_constraintBottom_toBottomOf="@id/user_card_3"
+        app:layout_constraintEnd_toEndOf="@id/user_card_3"
+        app:layout_constraintStart_toStartOf="@id/user_card_3"
+        app:layout_constraintTop_toTopOf="@id/user_card_3"
+        app:shapeAppearanceOverlay="@style/UserPicture"
+        app:srcCompat="@drawable/user_3" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="@dimen/user_pic_width"
+        android:layout_height="@dimen/user_pic_height"
+        app:layout_constraintBottom_toBottomOf="@id/user_card_4"
+        app:layout_constraintEnd_toEndOf="@id/user_card_4"
+        app:layout_constraintStart_toStartOf="@id/user_card_4"
+        app:layout_constraintTop_toTopOf="@id/user_card_4"
+        app:shapeAppearanceOverlay="@style/UserPicture"
+        app:srcCompat="@drawable/user_4" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="btn_camera,btn_microphone,btn_reactions,btn_exit"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:layout_marginBottom="8dp"
+        android:text="@string/some_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/nameTextSize"
+        app:layout_constraintBottom_toBottomOf="@id/user_card_1"
+        app:layout_constraintEnd_toEndOf="@id/user_card_1"
+        app:layout_constraintStart_toStartOf="@id/user_card_1" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/some_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/nameTextSize"
+        app:layout_constraintBottom_toBottomOf="@id/user_card_2"
+        app:layout_constraintEnd_toEndOf="@id/user_card_2"
+        app:layout_constraintStart_toStartOf="@id/user_card_2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/some_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/nameTextSize"
+        app:layout_constraintBottom_toBottomOf="@id/user_card_3"
+        app:layout_constraintEnd_toEndOf="@id/user_card_3"
+        app:layout_constraintStart_toStartOf="@id/user_card_3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/some_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/nameTextSize"
+        app:layout_constraintBottom_toBottomOf="@id/user_card_4"
+        app:layout_constraintEnd_toEndOf="@id/user_card_4"
+        app:layout_constraintStart_toStartOf="@id/user_card_4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
