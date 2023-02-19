@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/user_picture"
+        android:layout_width="@dimen/user_info_pic_width"
+        android:layout_height="@dimen/user_info_pic_height"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/UserPicture"
+        app:srcCompat="@drawable/camera_400" />
+
+    <TextView
+        android:id="@+id/user_name"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="@string/some_name"
+        android:textSize="@dimen/nameTextSize"
+        app:layout_constraintBottom_toBottomOf="@id/user_picture"
+        app:layout_constraintStart_toEndOf="@id/user_picture"
+        app:layout_constraintTop_toTopOf="@id/user_picture"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/user_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="@string/city"
+        android:textSize="@dimen/city_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/user_picture"
+        app:layout_constraintStart_toEndOf="@id/user_picture"
+        app:layout_constraintTop_toTopOf="@id/user_picture"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <ImageView
+        android:id="@+id/likedImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/phone_outline_28"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/more"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#2688EB" />
+
+    <ImageView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/message_outline_28"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#2688EB" />
+</androidx.constraintlayout.widget.ConstraintLayout>
