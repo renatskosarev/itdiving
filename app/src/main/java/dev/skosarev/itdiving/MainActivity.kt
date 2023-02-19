@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
     private var cameraIconState: Boolean = true
     private var microphoneIconState: Boolean = true
+    private var squaresIconState: Boolean = false
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -111,15 +112,12 @@ class MainActivity : AppCompatActivity() {
             referenceIds.shuffle()
             cardFlow?.referencedIds = referenceIds
 
-            /*
-                когда-нибудь я разберусь, как обновлять Flow из кода, и уберу этот кринж
-                но сейчас мне нужно бежать по неотложным делам, поэтому это пока будет здесь
-            */
-            if (microphoneIconState) {
-                microphoneButton?.setIconResource(R.drawable.microphone_alt_28)
+            if (squaresIconState) {
+                randomSortButton?.setIconResource(R.drawable.grid_rectangle_up_square_2_down_outline_28)
             } else {
-                microphoneButton?.setIconResource(R.drawable.microphone_slash_28)
+                randomSortButton?.setIconResource(R.drawable.square_4_outline_28)
             }
+            squaresIconState = !squaresIconState
         }
 
         Glide.with(this)
