@@ -17,7 +17,6 @@ import com.google.android.material.button.MaterialButton
 import com.google.android.material.imageview.ShapeableImageView
 import jp.wasabeef.glide.transformations.BlurTransformation
 import jp.wasabeef.glide.transformations.ColorFilterTransformation
-import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
     private var cameraButton: MaterialButton? = null
@@ -34,7 +33,7 @@ class MainActivity : AppCompatActivity() {
     private var userCard4: ShapeableImageView? = null
     private var cardFlow: Flow? = null
 
-    val userCards = intArrayOf(R.id.user_card_1, R.id.user_card_2, R.id.user_card_3, R.id.user_card_4)
+    private val userCards = intArrayOf(R.id.user_card_1, R.id.user_card_2, R.id.user_card_3, R.id.user_card_4)
 
 
     private var cameraIconState: Boolean = true
@@ -97,7 +96,6 @@ class MainActivity : AppCompatActivity() {
         exitButton?.setOnClickListener {
             Toast.makeText(applicationContext, "До свидания!", Toast.LENGTH_SHORT).show()
             finish()
-            exitProcess(0)
         }
 
         messagesButton?.setOnClickListener {

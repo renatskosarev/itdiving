@@ -14,7 +14,7 @@
 - По клику на верхнюю правую иконку плитки участников меняются местами в случайном порядке (+смена иконки)
 
 ## Скачать
-APK: https://github.com/skosarevv/itdiving/releases/download/1.0.1/ITDiving.apk
+APK: https://github.com/skosarevv/itdiving/releases/download/1.0.2/ITDiving.apk
 
 
 ## Использованные ресурсы
